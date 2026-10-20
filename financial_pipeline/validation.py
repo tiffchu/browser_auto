@@ -35,12 +35,12 @@ def prepare_record(record: dict, target_year: int) -> dict:
         end = None
     if result["fiscal_year"] != target_year or end is None or end.year != target_year:
         global_reasons.append(f"Fiscal year end must fall in {target_year}.")
-    if not result["audited"] or not result["auditor_evidence_pdf_page"]:
+    if not result["audited"] or not (result["auditor_evidence_pdf_page"] or result.get("auditor_evidence_locator")):
         global_reasons.append("Audited status needs evidence.")
     if not result["original_verified"]:
         global_reasons.append("Original statement version is unverified.")
-    if not result["publication_date"] or not result["pdf_filename"]:
-        global_reasons.append("Source PDF and original publication date are required.")
+    if not (result["publication_date"] or result.get("auditor_report_date")) or not result["pdf_filename"]:
+        global_reasons.append("Source file and publication or auditor report date are required.")
     for metric in METRICS:
         item = result[metric]
         reasons = list(global_reasons)
@@ -50,7 +50,7 @@ def prepare_record(record: dict, target_year: int) -> dict:
         if isinstance(value, bool) or not isinstance(value, (int, float)) or not isfinite(value):
             reasons.append("No certain numeric value.")
         if any(item[key] is None or item[key] == "" for key in
-               ("currency", "unit_multiplier", "pdf_page", "source_label")):
+               ("currency", "unit_multiplier", "source_label")) or not (item["pdf_page"] or item.get("source_locator")):
             reasons.append("Currency, units, or page/line evidence is missing.")
         if metric == "net_income":
             if result["net_income_measure"] != "reported_net_income":

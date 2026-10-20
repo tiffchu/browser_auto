@@ -24,9 +24,9 @@ def main() -> int:
               "year_basis": "fiscal_year_end", "report_version": "original",
               "net_income_measure": "reported_net_income", "net_income_basis": "consolidated_total",
               "allow_estimates": False, "allow_model_extraction": False,
-              "output_unit_multiplier": 1000, "uncertain_value_label": "Needs manual input"}
+              "output_unit_multiplier": 1, "uncertain_value_label": "Needs manual input"}
     if any(config.get(key) != value for key, value in policy.items()):
-        raise ValueError("Policy requires YEAR-1 original statements, reported consolidated net income, no estimates/model extraction, and output in thousands.")
+        raise ValueError("Policy requires YEAR-1 original statements, reported consolidated net income, no estimates/model extraction, and full-dollar output.")
     destination = root / config["output_xlsx"].format(year=year)
     report = root / config["run_report"].format(year=year)
     with (root / config["companies_csv"]).open(encoding="utf-8-sig", newline="") as stream:

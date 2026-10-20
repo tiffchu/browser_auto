@@ -69,7 +69,7 @@ class PolicyTests(unittest.TestCase):
     def test_zero_and_losses_are_preserved(self):
         result = prepare_record(reviewed_fixture(), 2025)
         self.assertEqual(output_value(result["revenue"]), 0)
-        self.assertEqual(output_value(result["net_income"]), -25)
+        self.assertEqual(output_value(result["net_income"]), -25000)
 
     def test_missing_derivation_only_blocks_net_income(self):
         record = reviewed_fixture()
@@ -105,6 +105,16 @@ class PolicyTests(unittest.TestCase):
         record["total_assets"]["currency"] = None
         self.assertIsNone(prepare_record(record, 2025)["total_assets"]["value"])
 
+    def test_specific_html_locators_and_auditor_date_are_accepted(self):
+        record = reviewed_fixture()
+        record.update(publication_date=None, auditor_report_date="2026-01-15",
+                      auditor_evidence_pdf_page=None, auditor_evidence_locator="Independent auditor report, printed p.2")
+        for metric in METRICS:
+            record[metric].update(pdf_page=None, source_locator="Annual statement, printed p.4")
+        self.assertEqual(prepare_record(record, 2025)["status"], "ready")
+        record["revenue"]["source_locator"] = None
+        self.assertIsNone(prepare_record(record, 2025)["revenue"]["value"])
+
     def test_nan_cannot_reach_output(self):
         record = reviewed_fixture()
         record["revenue"]["value"] = float("nan")
@@ -113,7 +123,7 @@ class PolicyTests(unittest.TestCase):
     def test_units_convert_without_currency_conversion(self):
         item = reviewed_fixture()["revenue"]
         item.update(value=1234500, unit_multiplier=1)
-        self.assertEqual(output_value(item), 1234.5)
+        self.assertEqual(output_value(item), 1234500)
 
     def test_reference_parentheses_and_footnotes(self):
         amount = parse_amount("($86,141) (2)")

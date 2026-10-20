@@ -2,17 +2,18 @@ from decimal import Decimal
 from pathlib import Path
 
 from .validation import MANUAL, METRICS
+from .currency import cad_amount, rank_by_revenue
 
 
-def output_value(item: dict) -> int | float | str:
-    """Output in thousands as in the example; no currency conversion or estimates."""
-    if item["status"] != "ready" or item["value"] is None:
+def output_value(item: dict, usdcad=None) -> int | float | str:
+    """Full CAD amounts. USD values require an explicit verified conversion rate."""
+    amount = cad_amount(item, usdcad)
+    if amount is None:
         return "Needs manual input"
-    amount = Decimal(str(item["value"])) * Decimal(item["unit_multiplier"]) / Decimal(1000)
     return int(amount) if amount == amount.to_integral_value() else float(amount)
 
 
-def write_workbook(records: list[dict], destination: Path, companies: list[dict]) -> None:
+def write_workbook(records: list[dict], destination: Path, companies: list[dict], usdcad=None) -> None:
     """New workbook: one target year's values/evidence, including unresolved rows.
 
     Callers must schema-validate and prepare records before calling this function.
@@ -32,23 +33,25 @@ def write_workbook(records: list[dict], destination: Path, companies: list[dict]
     workbook = Workbook()
     sheet = workbook.active
     sheet.title = f"Financials {year}"
-    sheet.append(["Rank (reference)", "Company", "Stock symbol", "Fiscal year end",
-                  f"Assets '{year_label} (000s)", f"Reported net income '{year_label} (000s)", f"Revenue '{year_label} (000s)",
+    sheet.append(["Rank by CAD revenue", "Company", "Stock symbol", "Fiscal year end",
+                  f"Assets {year} (CAD)", f"Reported net income {year} (CAD)", f"Revenue {year} (CAD)",
                   "Assets currency", "Net income currency", "Revenue currency", "Status",
-                  "Net income basis", "Net income derivation", "Review notes"])
+                  "Net income basis", "Net income derivation", "Review notes", "Converted from USD?"])
     evidence = workbook.create_sheet("Evidence")
     evidence.append(["Company", "Fiscal year", "Metric", "Reported value", "Currency",
                      "Unit multiplier", "PDF file", "PDF page", "Printed page", "Source label",
                      "Source URL", "Publication date", "Auditor PDF page", "Original verified",
                      "Status", "Review note"])
-    for record in records:
+    for record in rank_by_revenue(records, usdcad):
         company = metadata[record["company_id"]]
-        sheet.append([company.get("rank"), record["company_name"], company.get("stock_symbol"),
-                      record["fiscal_year_end"], *[output_value(record[key]) for key in
-                      ("total_assets", "net_income", "revenue")],
+        financial_values = [output_value(record[key], usdcad) for key in ("total_assets", "net_income", "revenue")]
+        complete = all(value != "Needs manual input" for value in financial_values)
+        sheet.append([record["revenue_rank"], record["company_name"], company.get("stock_symbol"),
+                      record["fiscal_year_end"], *financial_values,
                       *[record[key]["currency"] for key in ("total_assets", "net_income", "revenue")],
-                      "Ready" if record["status"] == "ready" else "Needs manual input",
-                      record["net_income_basis"], record["net_income_derivation"], record["review_notes"]])
+                      "Ready" if record["status"] == "ready" and complete else "Needs manual input",
+                      record["net_income_basis"], record["net_income_derivation"], record["review_notes"],
+                      "Yes" if usdcad is not None and any(record[k]["currency"] == "USD" for k in METRICS) else "No"])
         for metric in METRICS:
             item = record[metric]
             evidence.append([record["company_name"], record["fiscal_year"], metric, item["value"],

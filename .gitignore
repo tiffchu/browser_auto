@@ -2,6 +2,9 @@
 __pycache__/
 *.pyc
 .env
+node_modules/
+tmp/
+data/test_run_2025/
 data/pdfs/*
 !data/pdfs/.gitkeep
 data/extracted/*
