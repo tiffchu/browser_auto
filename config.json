@@ -1,5 +1,12 @@
 {
   "target_fiscal_year": 2025,
+  "year_basis": "fiscal_year_end",
+  "report_version": "original",
+  "allow_estimates": false,
+  "allow_model_extraction": false,
+  "uncertain_value_label": "Needs manual input",
+  "output_unit_multiplier": 1000,
+  "reference_json": "inputs/reference/expected_results.json",
   "companies_csv": "inputs/companies.csv",
   "output_xlsx": "outputs/financials_2025.xlsx",
   "run_report": "outputs/run_report.json"

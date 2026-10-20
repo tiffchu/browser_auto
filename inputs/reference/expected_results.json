@@ -1,0 +1,1528 @@
+{
+  "purpose": "User-supplied expected results, not audited source evidence",
+  "companies": [
+    {
+      "company_id": "rank_76",
+      "rank": 76,
+      "company_name": "Diversified Royalty Corp.",
+      "stock_symbol": "TSX:DIV",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "76",
+        "Company": "Diversified Royalty Corp.\n609 Granville St Suite 330 , Vancouver V7Y 1A1\nP: 604-235-3146 F: 604-685-9970 diversifiedroyaltycorp.com",
+        "Stock symbol": "TSX:DIV",
+        "Primary business": "Acquires top-line royalties from well-managed multi-location businesses and franchisors in North America",
+        "Senior executive(s)": "Sean Morrison, president and CEO, Greg Gutmanis, president and CFO",
+        "Year founded": "2013",
+        "Employees worldwide '25/'24": "44\nNP",
+        "Assets '25/'24(000s)": "$612,252\n$578,978",
+        "Net income '25/'24(000s)": "$36,669\n$26,619",
+        "Revenue '25/'24(000s)/% change": "$70,787\n$64,990\n8.9%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 612252,
+            "raw": "$612,252",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 578978,
+            "raw": "$578,978",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 36669,
+            "raw": "$36,669",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 26619,
+            "raw": "$26,619",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 70787,
+            "raw": "$70,787",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 64990,
+            "raw": "$64,990",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_77",
+      "rank": 77,
+      "company_name": "Orion Digital Corp.",
+      "stock_symbol": "TSX, Nasdaq:MOGO",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "77",
+        "Company": "Orion Digital Corp. (1)\n516 - 409 Granville St, Vancouver V6C 2X8\nP: 604-659-4380 F: 604-733-4944 orion-digital.com",
+        "Stock symbol": "TSX, Nasdaq:MOGO",
+        "Primary business": "Financial technology company, operates digital platforms for wealth and payments in Canada and Europe",
+        "Senior executive(s)": "David Feller, founder, CEO and chair, Gregory Feller, president and CFO",
+        "Year founded": "2003",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$173,634\n$190,000",
+        "Net income '25/'24(000s)": "($8,535)\n($13,700)",
+        "Revenue '25/'24(000s)/% change": "$68,617\n$71,206\n-3.6%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 173634,
+            "raw": "$173,634",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 190000,
+            "raw": "$190,000",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -8535,
+            "raw": "($8,535)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -13700,
+            "raw": "($13,700)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 68617,
+            "raw": "$68,617",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 71206,
+            "raw": "$71,206",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_78",
+      "rank": 78,
+      "company_name": "Plurilock Security Inc.",
+      "stock_symbol": "TSXV:PLUR",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "78",
+        "Company": "Plurilock Security Inc.\n1021 Hastings St W Suite 900, Vancouver V6E 0C3\nP: 250-590-2383 F: NP plurilock.com",
+        "Stock symbol": "TSXV:PLUR",
+        "Primary business": "Advanced network security solutions provider",
+        "Senior executive(s)": "Ian Paterson, CEO",
+        "Year founded": "2015",
+        "Employees worldwide '25/'24": "40\nNP",
+        "Assets '25/'24(000s)": "$25,264\n$34,473",
+        "Net income '25/'24(000s)": "($7,264)\n($11,532)",
+        "Revenue '25/'24(000s)/% change": "$60,989\n$58,149\n4.9%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 25264,
+            "raw": "$25,264",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 34473,
+            "raw": "$34,473",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -7264,
+            "raw": "($7,264)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -11532,
+            "raw": "($11,532)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 60989,
+            "raw": "$60,989",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 58149,
+            "raw": "$58,149",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_79",
+      "rank": 79,
+      "company_name": "Impact Silver Corp.",
+      "stock_symbol": "TSXV:IPT",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "79",
+        "Company": "Impact Silver Corp.\n543 Granville St Suite 303, Vancouver V6C 1X8\nP: 604-664-7707 F: NP impactsilver.com",
+        "Stock symbol": "TSXV:IPT",
+        "Primary business": "Silver and gold mining and exploration production",
+        "Senior executive(s)": "Frederick Davidson, president and CEO, Jerry Huang, CFO and VP finance, investor relations",
+        "Year founded": "2006",
+        "Employees worldwide '25/'24": "250\n270",
+        "Assets '25/'24(000s)": "$71,362\n$51,154",
+        "Net income '25/'24(000s)": "($10,259)\n($9,775)",
+        "Revenue '25/'24(000s)/% change": "$48,518\n$31,901\n52.1%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 71362,
+            "raw": "$71,362",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 51154,
+            "raw": "$51,154",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -10259,
+            "raw": "($10,259)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -9775,
+            "raw": "($9,775)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 48518,
+            "raw": "$48,518",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 31901,
+            "raw": "$31,901",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_80",
+      "rank": 80,
+      "company_name": "DMG Blockchain Solutions Inc.",
+      "stock_symbol": "TSXV:DMGI",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "80",
+        "Company": "DMG Blockchain Solutions Inc.\n4193 104 St, Delta V4K 3N3\nP: 516-222-2560 F: NP dmgblockchain.com",
+        "Stock symbol": "TSXV:DMGI",
+        "Primary business": "Cryptocurrency and blockchain platform developer",
+        "Senior executive(s)": "Sheldon Bennett, CEO",
+        "Year founded": "2011",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$132,030\n$103,869",
+        "Net income '25/'24(000s)": "($10,268)\n($5,230)",
+        "Revenue '25/'24(000s)/% change": "$47,337\n$33,900\n39.6%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 132030,
+            "raw": "$132,030",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 103869,
+            "raw": "$103,869",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -10268,
+            "raw": "($10,268)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -5230,
+            "raw": "($5,230)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 47337,
+            "raw": "$47,337",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 33900,
+            "raw": "$33,900",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_81",
+      "rank": 81,
+      "company_name": "Madison Pacific Properties Inc.",
+      "stock_symbol": "TSX:MPC",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "81",
+        "Company": "Madison Pacific Properties Inc.\n389 6th Ave W, Vancouver V5Y 1L1\nP: 604-732-6540 F: NP madisonpacific.ca",
+        "Stock symbol": "TSX:MPC",
+        "Primary business": "Property management and ownership",
+        "Senior executive(s)": "John DeLucchi, CEO",
+        "Year founded": "1998",
+        "Employees worldwide '25/'24": "12\n12",
+        "Assets '25/'24(000s)": "$850,601\n$795,447",
+        "Net income '25/'24(000s)": "$26,149\n($44,125)",
+        "Revenue '25/'24(000s)/% change": "$45,824\n$44,487\n3%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 850601,
+            "raw": "$850,601",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 795447,
+            "raw": "$795,447",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 26149,
+            "raw": "$26,149",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -44125,
+            "raw": "($44,125)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 45824,
+            "raw": "$45,824",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 44487,
+            "raw": "$44,487",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_82",
+      "rank": 82,
+      "company_name": "Greenlane Renewables Inc.",
+      "stock_symbol": "TSX:GRN",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "82",
+        "Company": "Greenlane Renewables Inc.\n3605 Gilmore Way Suite 110, Burnaby V5G 4X5\nP: 604-259-0343 F: NP greenlanerenewables.com",
+        "Stock symbol": "TSX:GRN",
+        "Primary business": "Gas cleaning equipment for upgrading biogas or landfill gas to renewable natural gas (RNG)",
+        "Senior executive(s)": "Ian Kaine, president and CEO, Monty Balderston, CFO",
+        "Year founded": "1986",
+        "Employees worldwide '25/'24": "113\n98",
+        "Assets '25/'24(000s)": "$46,766\n$45,352",
+        "Net income '25/'24(000s)": "($1,042)\n($1,863)",
+        "Revenue '25/'24(000s)/% change": "$44,431\n$51,820\n-14.3%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 46766,
+            "raw": "$46,766",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 45352,
+            "raw": "$45,352",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -1042,
+            "raw": "($1,042)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -1863,
+            "raw": "($1,863)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 44431,
+            "raw": "$44,431",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 51820,
+            "raw": "$51,820",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_83",
+      "rank": 83,
+      "company_name": "Avant Brands Inc.",
+      "stock_symbol": "TSX:AVNT",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "83",
+        "Company": "Avant Brands Inc.\n1632 Dickson Ave Suite 335, Kelowna V1Y 7T2\nP: 778-760-8338 F: NP avantbrands.ca",
+        "Stock symbol": "TSX:AVNT",
+        "Primary business": "Cultivation, production and marketing of high-quality cannabis with cultivation facilities in B.C., Alberta and Ontario",
+        "Senior executive(s)": "Norton  Singhavon, founder, director and CEO",
+        "Year founded": "2012",
+        "Employees worldwide '25/'24": "180\n180",
+        "Assets '25/'24(000s)": "$49,240\n$59,472",
+        "Net income '25/'24(000s)": "($9,880)\n($22,554)",
+        "Revenue '25/'24(000s)/% change": "$35,895\n$35,803\n0.3%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 49240,
+            "raw": "$49,240",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 59472,
+            "raw": "$59,472",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -9880,
+            "raw": "($9,880)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -22554,
+            "raw": "($22,554)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 35895,
+            "raw": "$35,895",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 35803,
+            "raw": "$35,803",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_84",
+      "rank": 84,
+      "company_name": "D-Wave Quantum Inc.",
+      "stock_symbol": "NYSE:QBTS",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "84",
+        "Company": "D-Wave Quantum Inc.\n3033 Beta Ave, Burnaby V5G 4M9\nP: 604-630-1428 F: 604-630-1434 dwavesys.com",
+        "Stock symbol": "NYSE:QBTS",
+        "Primary business": "Develops and delivers quantum computing systems, software and services",
+        "Senior executive(s)": "Alan Baratz, CEO, John Markovich, CFO",
+        "Year founded": "1999",
+        "Employees worldwide '25/'24": "382\nNP",
+        "Assets '25/'24(000s)": "$1,280,123\n$273,759",
+        "Net income '25/'24(000s)": "($496,306)\n($197,085)",
+        "Revenue '25/'24(000s)/% change": "$34,368\n$12,091\n184.2%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 1280123,
+            "raw": "$1,280,123",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 273759,
+            "raw": "$273,759",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -496306,
+            "raw": "($496,306)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -197085,
+            "raw": "($197,085)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 34368,
+            "raw": "$34,368",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 12091,
+            "raw": "$12,091",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_85",
+      "rank": 85,
+      "company_name": "Westport Fuel Systems Inc.",
+      "stock_symbol": "TSX:WPRT",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "85",
+        "Company": "Westport Fuel Systems Inc.\n1691 75th Ave W, Vancouver V6P 6P2\nP: 604-718-2000 F: 604-718-2001 wfsinc.com",
+        "Stock symbol": "TSX:WPRT",
+        "Primary business": "Engineers advanced natural gas engines and fuel systems",
+        "Senior executive(s)": "Dan Sceli, CEO, Elizabeth Owens, CFO, Bill Larkin, CFO",
+        "Year founded": "1995",
+        "Employees worldwide '25/'24": "112\n1,509",
+        "Assets '25/'24(000s)": "$131,406 (2)\n$399,462 (2)",
+        "Net income '25/'24(000s)": "($86,141) (2)\n($29,918) (2)",
+        "Revenue '25/'24(000s)/% change": "$32,594 (2)\n$414,000 (2)\n-92.1%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 131406,
+            "raw": "$131,406 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 399462,
+            "raw": "$399,462 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -86141,
+            "raw": "($86,141) (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": -29918,
+            "raw": "($29,918) (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 32594,
+            "raw": "$32,594 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 414000,
+            "raw": "$414,000 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_86",
+      "rank": 86,
+      "company_name": "Starcore International Mines Ltd.",
+      "stock_symbol": "TSX:SAM",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "86",
+        "Company": "Starcore International Mines Ltd.\n580 Hornby St Suite 750, Box 113, Vancouver V6C 3B6\nP: 416-640-1936 F: 604-602-4936 starcore.com",
+        "Stock symbol": "TSX:SAM",
+        "Primary business": "Sustainable precious-metals production in North America",
+        "Senior executive(s)": "Robert Eadie, director, president and CEO",
+        "Year founded": "2006",
+        "Employees worldwide '25/'24": "65\nNP",
+        "Assets '25/'24(000s)": "$55,998\n$51,973",
+        "Net income '25/'24(000s)": "$215\n$1,633",
+        "Revenue '25/'24(000s)/% change": "$32,159\n$28,327\n13.5%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 55998,
+            "raw": "$55,998",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 51973,
+            "raw": "$51,973",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 215,
+            "raw": "$215",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1633,
+            "raw": "$1,633",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 32159,
+            "raw": "$32,159",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 28327,
+            "raw": "$28,327",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_87",
+      "rank": 87,
+      "company_name": "Gatekeeper Systems Inc.",
+      "stock_symbol": "TSXV:GSI",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "87",
+        "Company": "Gatekeeper Systems Inc.\n31127 Wheel Ave Suite 301, Abbotsford V2T 6H1\nP: 604-864-6187 F: 604-864-8490 gatekeeper-systems.com",
+        "Stock symbol": "TSXV:GSI",
+        "Primary business": "Provider of intelligent video and data solutions designed to provide a safer transportation environment",
+        "Senior executive(s)": "Doug Dyment, president and CEO",
+        "Year founded": "2010",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$38,517\n$22,368",
+        "Net income '25/'24(000s)": "($3,068)\n$1,993",
+        "Revenue '25/'24(000s)/% change": "$31,785\n$37,811\n-15.9%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 38517,
+            "raw": "$38,517",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 22368,
+            "raw": "$22,368",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -3068,
+            "raw": "($3,068)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1993,
+            "raw": "$1,993",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 31785,
+            "raw": "$31,785",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 37811,
+            "raw": "$37,811",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_88",
+      "rank": 88,
+      "company_name": "Global Education Communities Corp.",
+      "stock_symbol": "TSX:GEC",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "88",
+        "Company": "Global Education Communities Corp.\n777 Broadway W Suite 1200, Vancouver V5Z 4J7\nP: 604-871-9909 F: 604-871-9919 gechq.com",
+        "Stock symbol": "TSX:GEC",
+        "Primary business": "Education and student housing investment and management",
+        "Senior executive(s)": "Toby Chu, chair, president and CEO, Paul Harman, CFO",
+        "Year founded": "1994",
+        "Employees worldwide '25/'24": "124\n652",
+        "Assets '25/'24(000s)": "$377,356\n$475,211",
+        "Net income '25/'24(000s)": "$22,141\n$1,094",
+        "Revenue '25/'24(000s)/% change": "$29,037\n$35,235\n-17.6%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 377356,
+            "raw": "$377,356",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 475211,
+            "raw": "$475,211",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 22141,
+            "raw": "$22,141",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1094,
+            "raw": "$1,094",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 29037,
+            "raw": "$29,037",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 35235,
+            "raw": "$35,235",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_89",
+      "rank": 89,
+      "company_name": "1933 Industries Inc.",
+      "stock_symbol": "CSE:TGIF",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "89",
+        "Company": "1933 Industries Inc.\n1055 Hastings St W Suite 300, Vancouver V6E 2E9\nP: 604-684-6264 F: NP 1933industries.com",
+        "Stock symbol": "CSE:TGIF",
+        "Primary business": "Cultivation and manufacturing of a large portfolio of cannabis consumer-packaged goods in a variety of formats for both the wholesale and retail markets",
+        "Senior executive(s)": "Paul Rosen, CEO",
+        "Year founded": "2008",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$16,799\n$16,868",
+        "Net income '25/'24(000s)": "($99,778)\n($624)",
+        "Revenue '25/'24(000s)/% change": "$17,446\n$19,351\n-9.8%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 16799,
+            "raw": "$16,799",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 16868,
+            "raw": "$16,868",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -99778,
+            "raw": "($99,778)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -624,
+            "raw": "($624)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 17446,
+            "raw": "$17,446",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 19351,
+            "raw": "$19,351",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_90",
+      "rank": 90,
+      "company_name": "Kelso Technologies Inc.",
+      "stock_symbol": "TSX:KLS; NYSE:KIQ",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "90",
+        "Company": "Kelso Technologies Inc.\n13966 18B Ave, Surrey V4A 8J1\nP: 604-590-1525 F: NP kelsotech.com",
+        "Stock symbol": "TSX:KLS; NYSE:KIQ",
+        "Primary business": "Design, engineering and sales of patented technologies in the North American railway equipment supply industry",
+        "Senior executive(s)": "",
+        "Year founded": "1987",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$7,645 (2)\n$9,000 (2)",
+        "Net income '25/'24(000s)": "$625 (2)\n($6,332) (2)",
+        "Revenue '25/'24(000s)/% change": "$15,074 (2)\n$14,630 (2)\n3%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 7645,
+            "raw": "$7,645 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 9000,
+            "raw": "$9,000 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 625,
+            "raw": "$625 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": -6332,
+            "raw": "($6,332) (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 15074,
+            "raw": "$15,074 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 14630,
+            "raw": "$14,630 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_91",
+      "rank": 91,
+      "company_name": "Wishpond Technologies Ltd.",
+      "stock_symbol": "TSXV: WISH",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "91",
+        "Company": "Wishpond Technologies Ltd.\n422 Richards St Suite 170, Vancouver V6B 2Z4\nP: 800-921-0167 F: NP wishpond.com",
+        "Stock symbol": "TSXV: WISH",
+        "Primary business": "Develop all-in-one marketing suite that makes it easy to generate leads",
+        "Senior executive(s)": "Ali Tajskandar, chair and CEO",
+        "Year founded": "2009",
+        "Employees worldwide '25/'24": "NP\n250",
+        "Assets '25/'24(000s)": "$12,993\n$13,618",
+        "Net income '25/'24(000s)": "($2,281)\n($829)",
+        "Revenue '25/'24(000s)/% change": "$14,368\n$21,620\n-33.5%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 12993,
+            "raw": "$12,993",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 13618,
+            "raw": "$13,618",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -2281,
+            "raw": "($2,281)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -829,
+            "raw": "($829)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 14368,
+            "raw": "$14,368",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 21620,
+            "raw": "$21,620",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_92",
+      "rank": 92,
+      "company_name": "EnWave Corp.",
+      "stock_symbol": "TSX-V:ENW",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "92",
+        "Company": "EnWave Corp.\n1668 Derwent Way Suite 1, Delta V3M 6R9\nP: 604-806-6110 F: NP enwave.net",
+        "Stock symbol": "TSX-V:ENW",
+        "Primary business": "Patented industrial dehydration technology for food, cannabis, biopharmaceuticals and industrial materials",
+        "Senior executive(s)": "John Budreski, executive chair, Brent Charleton, president and CEO",
+        "Year founded": "1999",
+        "Employees worldwide '25/'24": "27\n25",
+        "Assets '25/'24(000s)": "$18,546\n$13,147",
+        "Net income '25/'24(000s)": "($418)\n($2,398)",
+        "Revenue '25/'24(000s)/% change": "$13,829\n$8,181\n69%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 18546,
+            "raw": "$18,546",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 13147,
+            "raw": "$13,147",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -418,
+            "raw": "($418)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -2398,
+            "raw": "($2,398)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 13829,
+            "raw": "$13,829",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 8181,
+            "raw": "$8,181",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_93",
+      "rank": 93,
+      "company_name": "InMed Pharmaceuticals Inc.",
+      "stock_symbol": "NASDAQ:INM",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "93",
+        "Company": "InMed Pharmaceuticals Inc.\n815 Hastings St W Suite 310, Vancouver V6C 1B4\nP: 604-669-7207 F: 604-683-2506 inmedpharma.com",
+        "Stock symbol": "NASDAQ:INM",
+        "Primary business": "Manufacature and develop rare cannabinoids for the pharmaceutical and health and wellness markets",
+        "Senior executive(s)": "Eric  Adams, president and CEO",
+        "Year founded": "1981",
+        "Employees worldwide '25/'24": "13\nNP",
+        "Assets '25/'24(000s)": "$21,778 (2)\n$16,195 (2)",
+        "Net income '25/'24(000s)": "($11,409) (2)\n($10,514) (2)",
+        "Revenue '25/'24(000s)/% change": "$6,909 (2)\n$6,298 (2)\n9.7%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 21778,
+            "raw": "$21,778 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 16195,
+            "raw": "$16,195 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -11409,
+            "raw": "($11,409) (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": -10514,
+            "raw": "($10,514) (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 6909,
+            "raw": "$6,909 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 6298,
+            "raw": "$6,298 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_94",
+      "rank": 94,
+      "company_name": "Destiny Media Technologies Inc.",
+      "stock_symbol": "TSXV:DSY",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "94",
+        "Company": "Destiny Media Technologies Inc.\n1575 Georgia St W Suite 428, Vancouver V6G 2V3\nP: 604-609-7736 F: 604-609-0611 dsny.com",
+        "Stock symbol": "TSXV:DSY",
+        "Primary business": "Secure distribution of pre-release music for promotional purposes",
+        "Senior executive(s)": "Fred Vandenberg, CEO",
+        "Year founded": "1991",
+        "Employees worldwide '25/'24": "30\n34",
+        "Assets '25/'24(000s)": "$4,147 (2)\n$5,052 (2)",
+        "Net income '25/'24(000s)": "($892) (2)\n$153 (2)",
+        "Revenue '25/'24(000s)/% change": "$6,324 (2)\n$6,056 (2)\n4.4%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 4147,
+            "raw": "$4,147 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 5052,
+            "raw": "$5,052 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -892,
+            "raw": "($892) (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 153,
+            "raw": "$153 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 6324,
+            "raw": "$6,324 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          },
+          "2024": {
+            "value": 6056,
+            "raw": "$6,056 (2)",
+            "footnote_markers": [
+              "2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_95",
+      "rank": 95,
+      "company_name": "Aurora Solar Technologies Inc.",
+      "stock_symbol": "TSX-V:ACU",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "95",
+        "Company": "Aurora Solar Technologies Inc.\n2025 Willingdon Ave Suite 900, Burnaby V5C 0J3\nP: 778-241-5000 F: NP aurorasolartech.com",
+        "Stock symbol": "TSX-V:ACU",
+        "Primary business": "Develops and markets production measurement and control systems for the photovoltaic manufacturing industry",
+        "Senior executive(s)": "Kevin Dodds, CEO",
+        "Year founded": "2006",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$7,097\n$10,195",
+        "Net income '25/'24(000s)": "($3,220)\n($218)",
+        "Revenue '25/'24(000s)/% change": "$6,294\n$10,915\n-42.3%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 7097,
+            "raw": "$7,097",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 10195,
+            "raw": "$10,195",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -3220,
+            "raw": "($3,220)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -218,
+            "raw": "($218)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 6294,
+            "raw": "$6,294",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 10915,
+            "raw": "$10,915",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_96",
+      "rank": 96,
+      "company_name": "International Parkside Products Inc.",
+      "stock_symbol": "TSX-V:IPD",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "96",
+        "Company": "International Parkside Products Inc.\n788 Beatty St Suite 304, Vancouver V6B 2M1\nP: 877-608-0868 F: 604-681-6194 lenspen.com",
+        "Stock symbol": "TSX-V:IPD",
+        "Primary business": "Produces and markets optical, screen-cleaning and eyeglass-cleaning products using the company’s patented carbon black technology and the new light carbon formula for international distribution",
+        "Senior executive(s)": "Murray Keating, CEO, Mindy Sirsiris, CFO",
+        "Year founded": "1983",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$842\n$1,281",
+        "Net income '25/'24(000s)": "($262)\n($106)",
+        "Revenue '25/'24(000s)/% change": "$3,413\n$3,609\n-5.4%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 842,
+            "raw": "$842",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1281,
+            "raw": "$1,281",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -262,
+            "raw": "($262)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -106,
+            "raw": "($106)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 3413,
+            "raw": "$3,413",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 3609,
+            "raw": "$3,609",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_97",
+      "rank": 97,
+      "company_name": "Uniserve Communications Corp.",
+      "stock_symbol": "TSXV:USS",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "97",
+        "Company": "Uniserve Communications Corp.\n333 Terminal Ave Suite 209, Vancouver V6A 4C1\nP: 604-395-3900 F: 604-630-7194 uniserve.com",
+        "Stock symbol": "TSXV:USS",
+        "Primary business": "Internet, digital phone, fax-to-email, dial-up, web hosting, domain registration; managed IT services, co-location",
+        "Senior executive(s)": "Kelly Walker, president and CEO",
+        "Year founded": "2003",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$4,258\n$3,251",
+        "Net income '25/'24(000s)": "($1,898)\n($191)",
+        "Revenue '25/'24(000s)/% change": "$3,108\n$6,439\n-51.7%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 4258,
+            "raw": "$4,258",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 3251,
+            "raw": "$3,251",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -1898,
+            "raw": "($1,898)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -191,
+            "raw": "($191)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 3108,
+            "raw": "$3,108",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 6439,
+            "raw": "$6,439",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_98",
+      "rank": 98,
+      "company_name": "Total Telcom Inc.",
+      "stock_symbol": "TSXV:TTZ",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "98",
+        "Company": "Total Telcom Inc.\n1632 Dickson Ave Suite 540, Kelowna V1Y 7T2\nP: 250-860-3762 F: NP totaltelcom.com",
+        "Stock symbol": "TSXV:TTZ",
+        "Primary business": "Satellite telecommunication provider",
+        "Senior executive(s)": "Neil Magrath, chair and CEO, Scott Allen, CFO",
+        "Year founded": "1980",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$5,793\n$5,529",
+        "Net income '25/'24(000s)": "$342\n$292",
+        "Revenue '25/'24(000s)/% change": "$2,201\n$1,971\n11.7%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 5793,
+            "raw": "$5,793",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 5529,
+            "raw": "$5,529",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 342,
+            "raw": "$342",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 292,
+            "raw": "$292",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 2201,
+            "raw": "$2,201",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1971,
+            "raw": "$1,971",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_99",
+      "rank": 99,
+      "company_name": "Neptune Digital Assets Corp.",
+      "stock_symbol": "TSXV:NDA",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "99",
+        "Company": "Neptune Digital Assets Corp.\n1133 Melville St Suite 2700, Vancouver V6E 4E5\nP: 800-545-0941 F: NP neptunedigitalassets.com",
+        "Stock symbol": "TSXV:NDA",
+        "Primary business": "Bitcoin mining, and blockchain infrastructure company",
+        "Senior executive(s)": "Cale Moodie, CEO and co-founder",
+        "Year founded": "2018",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$87,169\n$49,819",
+        "Net income '25/'24(000s)": "$368\n$1,558",
+        "Revenue '25/'24(000s)/% change": "$1,782\n$2,408\n-26%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 87169,
+            "raw": "$87,169",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 49819,
+            "raw": "$49,819",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": 368,
+            "raw": "$368",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1558,
+            "raw": "$1,558",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 1782,
+            "raw": "$1,782",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 2408,
+            "raw": "$2,408",
+            "footnote_markers": []
+          }
+        }
+      }
+    },
+    {
+      "company_id": "rank_100",
+      "rank": 100,
+      "company_name": "Element Lifestyle Retirement Inc.",
+      "stock_symbol": "TSXV:ELM",
+      "unit_multiplier": 1000,
+      "currency": null,
+      "currency_note": "Dollar sign only; verify currency from original statements. Footnotes are not defined in this CSV.",
+      "original_columns": {
+        "Rank": "100",
+        "Company": "Element Lifestyle Retirement Inc.\n438 West King Edward Ave, Vancouver V5Y 0M5\nP: 604-676-1418 F: NP elementlifestyleretirement.com",
+        "Stock symbol": "TSXV:ELM",
+        "Primary business": "Develops and operates retirement communities",
+        "Senior executive(s)": "Don Ho, president, Michael Diao, CEO",
+        "Year founded": "2013",
+        "Employees worldwide '25/'24": "NP\nNP",
+        "Assets '25/'24(000s)": "$1,224\n$1,121",
+        "Net income '25/'24(000s)": "($210)\n($478)",
+        "Revenue '25/'24(000s)/% change": "$1,069\n$1,042\n2.6%"
+      },
+      "expected": {
+        "total_assets": {
+          "2025": {
+            "value": 1224,
+            "raw": "$1,224",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1121,
+            "raw": "$1,121",
+            "footnote_markers": []
+          }
+        },
+        "net_income": {
+          "2025": {
+            "value": -210,
+            "raw": "($210)",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": -478,
+            "raw": "($478)",
+            "footnote_markers": []
+          }
+        },
+        "revenue": {
+          "2025": {
+            "value": 1069,
+            "raw": "$1,069",
+            "footnote_markers": []
+          },
+          "2024": {
+            "value": 1042,
+            "raw": "$1,042",
+            "footnote_markers": []
+          }
+        }
+      }
+    }
+  ]
+}
