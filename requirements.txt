@@ -1,0 +1,6 @@
+# Initial dependencies; lock versions after choosing the runtime and provider.
+requests>=2.32,<3
+pdfplumber>=0.11,<1
+openpyxl>=3.1,<4
+jsonschema>=4.23,<5
+# Optional later: playwright, pymupdf, anthropic (or another model SDK).

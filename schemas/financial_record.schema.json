@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audited financial record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["company_id", "company_name", "fiscal_year", "fiscal_year_end", "publication_date", "audited", "latest_verified", "auditor_evidence_pdf_page", "source_url", "pdf_filename", "status", "review_notes", "revenue", "net_income", "total_assets"],
+  "properties": {
+    "company_id": {"type": "string", "minLength": 1},
+    "company_name": {"type": "string", "minLength": 1},
+    "fiscal_year": {"type": "integer"},
+    "fiscal_year_end": {"type": ["string", "null"], "format": "date"},
+    "publication_date": {"type": ["string", "null"], "format": "date"},
+    "audited": {"type": "boolean"},
+    "latest_verified": {"type": "boolean"},
+    "auditor_evidence_pdf_page": {"type": ["integer", "null"], "minimum": 1},
+    "source_url": {"type": ["string", "null"], "format": "uri"},
+    "pdf_filename": {"type": "string", "minLength": 1},
+    "status": {"enum": ["needs_review", "ready"]},
+    "review_notes": {"type": "string"},
+    "revenue": {"$ref": "#/$defs/metric"},
+    "net_income": {"$ref": "#/$defs/metric"},
+    "total_assets": {"$ref": "#/$defs/metric"}
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "currency", "unit_multiplier", "pdf_page", "printed_page", "source_label"],
+      "properties": {
+        "value": {"type": ["number", "null"], "description": "Signed amount exactly as reported, before multiplying by unit_multiplier."},
+        "currency": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"},
+        "unit_multiplier": {"enum": [1, 1000, 1000000, 1000000000, null]},
+        "pdf_page": {"type": ["integer", "null"], "minimum": 1},
+        "printed_page": {"type": ["string", "null"]},
+        "source_label": {"type": ["string", "null"], "minLength": 1}
+      }
+    }
+  }
+}

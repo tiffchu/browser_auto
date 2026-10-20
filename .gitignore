@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/pdfs/*
+!data/pdfs/.gitkeep
+data/extracted/*
+!data/extracted/.gitkeep
+outputs/*
+!outputs/.gitkeep

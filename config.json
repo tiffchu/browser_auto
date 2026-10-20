@@ -1,0 +1,6 @@
+{
+  "target_fiscal_year": 2025,
+  "companies_csv": "inputs/companies.csv",
+  "output_xlsx": "outputs/financials_2025.xlsx",
+  "run_report": "outputs/run_report.json"
+}
