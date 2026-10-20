@@ -3,7 +3,7 @@
   "title": "Audited financial record",
   "type": "object",
   "additionalProperties": false,
-  "required": ["company_id", "company_name", "fiscal_year", "fiscal_year_end", "publication_date", "audited", "original_verified", "auditor_evidence_pdf_page", "source_url", "pdf_filename", "status", "review_notes", "net_income_basis", "net_income_derivation", "revenue", "net_income", "total_assets"],
+  "required": ["company_id", "company_name", "fiscal_year", "fiscal_year_end", "publication_date", "audited", "original_verified", "auditor_evidence_pdf_page", "source_url", "pdf_filename", "status", "review_notes", "net_income_measure", "net_income_basis", "net_income_derivation", "revenue", "net_income", "total_assets"],
   "properties": {
     "company_id": {"type": "string", "minLength": 1},
     "company_name": {"type": "string", "minLength": 1},
@@ -17,8 +17,9 @@
     "pdf_filename": {"type": ["string", "null"], "minLength": 1},
     "status": {"enum": ["needs_manual_input", "ready"]},
     "review_notes": {"type": "string"},
+    "net_income_measure": {"enum": ["reported_net_income", "total_comprehensive_income", "other_comprehensive_income", "other", "unresolved"], "description": "Candidate measure classification. Only reported_net_income can pass validation for a numeric net income output; other measures require manual input."},
     "net_income_basis": {"enum": ["consolidated_total", "attributable_to_owners", "unresolved"]},
-    "net_income_derivation": {"type": "string", "description": "Exact statement line, attribution basis, and explanation. If reconciled, cite components, amounts, signs, and pages. Never estimate."},
+    "net_income_derivation": {"type": "string", "description": "Explain the exact reported consolidated net income/loss line, units, and page. Supporting audited components may explain the reported result, but must never replace it with a calculated estimate or comprehensive income."},
     "revenue": {"$ref": "#/$defs/metric"},
     "net_income": {"$ref": "#/$defs/metric"},
     "total_assets": {"$ref": "#/$defs/metric"}

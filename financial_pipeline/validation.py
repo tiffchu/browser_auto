@@ -15,7 +15,7 @@ def pending_record(company: dict, year: int, reason: str) -> dict:
         "fiscal_year": year, "fiscal_year_end": None, "publication_date": None,
         "audited": False, "original_verified": False, "auditor_evidence_pdf_page": None,
         "source_url": None, "pdf_filename": None, "status": MANUAL, "review_notes": reason,
-        "net_income_basis": "unresolved", "net_income_derivation": "",
+        "net_income_measure": "unresolved", "net_income_basis": "unresolved", "net_income_derivation": "",
         **{metric: {"value": None, "currency": None, "unit_multiplier": None,
                     "pdf_page": None, "printed_page": None, "source_label": None,
                     "status": MANUAL, "review_note": reason} for metric in METRICS},
@@ -53,8 +53,12 @@ def prepare_record(record: dict, target_year: int) -> dict:
                ("currency", "unit_multiplier", "pdf_page", "source_label")):
             reasons.append("Currency, units, or page/line evidence is missing.")
         if metric == "net_income":
-            if result["net_income_basis"] == "unresolved" or not result["net_income_derivation"].strip():
-                reasons.append("Net income definition and source-based derivation are required.")
+            if result["net_income_measure"] != "reported_net_income":
+                reasons.append("Use reported net income/loss; comprehensive income is excluded.")
+            if "comprehensive" in (item["source_label"] or "").casefold():
+                reasons.append("Source label refers to comprehensive income/loss; locate the net income/loss line.")
+            if result["net_income_basis"] != "consolidated_total" or not result["net_income_derivation"].strip():
+                reasons.append("Reported consolidated net income and a source-based explanation are required.")
         if reasons:
             item.update(value=None, status=MANUAL, review_note=" ".join(dict.fromkeys(reasons)))
     result["status"] = "ready" if all(result[key]["status"] == "ready" for key in METRICS) else MANUAL

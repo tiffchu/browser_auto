@@ -13,22 +13,27 @@ def output_value(item: dict) -> int | float | str:
 
 
 def write_workbook(records: list[dict], destination: Path, companies: list[dict]) -> None:
-    """New workbook: 2025 values and evidence, including unresolved company rows.
+    """New workbook: one target year's values/evidence, including unresolved rows.
 
     Callers must schema-validate and prepare records before calling this function.
-    The example's 2024 figures are benchmarks only, outside the requested 2025 run.
+    Historical example figures are benchmarks only, never collection output.
     """
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
 
     if not records:
         raise ValueError("No companies to export.")
+    years = {record["fiscal_year"] for record in records}
+    if len(years) != 1:
+        raise ValueError("Export exactly one target fiscal year per workbook.")
+    year = next(iter(years))
+    year_label = str(year)[-2:]
     metadata = {company["company_id"]: company for company in companies}
     workbook = Workbook()
     sheet = workbook.active
-    sheet.title = "Financials 2025"
+    sheet.title = f"Financials {year}"
     sheet.append(["Rank (reference)", "Company", "Stock symbol", "Fiscal year end",
-                  "Assets '25 (000s)", "Net income '25 (000s)", "Revenue '25 (000s)",
+                  f"Assets '{year_label} (000s)", f"Reported net income '{year_label} (000s)", f"Revenue '{year_label} (000s)",
                   "Assets currency", "Net income currency", "Revenue currency", "Status",
                   "Net income basis", "Net income derivation", "Review notes"])
     evidence = workbook.create_sheet("Evidence")

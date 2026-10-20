@@ -1,12 +1,14 @@
 import json
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
 from jsonschema import Draft202012Validator, FormatChecker
 
 from financial_pipeline import __main__ as cli
+from financial_pipeline.policy import previous_fiscal_year
 from financial_pipeline.reference import parse_amount, read_example
 from financial_pipeline.spreadsheet import output_value
 from financial_pipeline.validation import MANUAL, METRICS, pending_record, prepare_record
@@ -21,6 +23,7 @@ def reviewed_fixture():
     record.update(fiscal_year_end="2025-09-30", publication_date="2026-01-15",
                   audited=True, original_verified=True, auditor_evidence_pdf_page=2,
                   pdf_filename="synthetic.pdf", status="ready", net_income_basis="consolidated_total",
+                  net_income_measure="reported_net_income",
                   net_income_derivation="Synthetic fixture: copied reported net loss on PDF page 4.")
     for metric in METRICS:
         record[metric].update(value=-25 if metric == "net_income" else 0, currency="CAD",
@@ -30,6 +33,11 @@ def reviewed_fixture():
 
 
 class PolicyTests(unittest.TestCase):
+    def test_target_year_rolls_over_on_january_first(self):
+        self.assertEqual(previous_fiscal_year(date(2026, 12, 31)), 2025)
+        self.assertEqual(previous_fiscal_year(date(2027, 1, 1)), 2026)
+        self.assertEqual(previous_fiscal_year(date(2027, 10, 20)), 2026)
+
     def test_pending_record_matches_schema(self):
         schema = json.loads((ROOT / "schemas/financial_record.schema.json").read_text())
         validator = Draft202012Validator(schema, format_checker=FormatChecker())
@@ -69,6 +77,28 @@ class PolicyTests(unittest.TestCase):
         result = prepare_record(record, 2025)
         self.assertIsNone(result["net_income"]["value"])
         self.assertEqual(result["revenue"]["status"], "ready")
+
+    def test_comprehensive_and_unresolved_measures_require_manual_input(self):
+        for measure in ("total_comprehensive_income", "other_comprehensive_income", "other", "unresolved"):
+            with self.subTest(measure=measure):
+                record = reviewed_fixture()
+                record["net_income_measure"] = measure
+                result = prepare_record(record, 2025)
+                self.assertIsNone(result["net_income"]["value"])
+                self.assertEqual(result["net_income"]["status"], MANUAL)
+                self.assertEqual(result["revenue"]["status"], "ready")
+
+    def test_comprehensive_source_label_cannot_be_misclassified_as_net_income(self):
+        for label in ("Total comprehensive income", "TOTAL COMPREHENSIVE LOSS", "Other comprehensive income"):
+            with self.subTest(label=label):
+                record = reviewed_fixture()
+                record["net_income"]["source_label"] = label
+                self.assertIsNone(prepare_record(record, 2025)["net_income"]["value"])
+
+    def test_attributable_subtotal_does_not_replace_reported_group_net_income(self):
+        record = reviewed_fixture()
+        record["net_income_basis"] = "attributable_to_owners"
+        self.assertIsNone(prepare_record(record, 2025)["net_income"]["value"])
 
     def test_missing_currency_blocks_value(self):
         record = reviewed_fixture()
@@ -118,6 +148,23 @@ class PolicyTests(unittest.TestCase):
             outcomes = json.loads((root / "run_report.json").read_text())
             self.assertEqual(len(outcomes), 25)
             self.assertIn("NotImplementedError", outcomes[0]["review_notes"])
+
+    def test_next_year_batch_uses_only_2026_and_year_specific_output_paths(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            root = Path(directory)
+            config = json.loads((ROOT / "config.json").read_text())
+            config["companies_csv"] = str(ROOT / "inputs/companies.csv")
+            config_path = root / "config.json"
+            config_path.write_text(json.dumps(config))
+            with patch("sys.argv", ["financial_pipeline", "--config", str(config_path)]), \
+                 patch.object(cli, "previous_fiscal_year", return_value=2026), \
+                 patch.object(cli, "find_original_audited_report", side_effect=NotImplementedError("TODO")) as discover, \
+                 patch.object(cli, "write_workbook") as writer, patch("builtins.print"):
+                self.assertEqual(cli.main(), 1)
+            self.assertTrue(all(call.args[1] == 2026 for call in discover.call_args_list))
+            self.assertTrue(all(record["fiscal_year"] == 2026 for record in writer.call_args.args[0]))
+            self.assertEqual(writer.call_args.args[1].name, "financials_2026.xlsx")
+            self.assertTrue((root / "outputs/run_report_2026.json").exists())
 
 
 if __name__ == "__main__":

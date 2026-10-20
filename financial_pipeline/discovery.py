@@ -19,5 +19,7 @@ def find_original_audited_report(company: dict, target_year: int) -> ReportSourc
     verification, fiscal year end, auditor evidence, and supplied file checks.
     Exclude later restatements and later annual-report comparative columns.
     Preserve former company names/tickers when matching the original issuer.
+    If target_year statements are unavailable, require manual input; never
+    silently substitute an older fiscal year or collect multiple years.
     """
     raise NotImplementedError("Company report discovery is not configured yet.")
